@@ -8,8 +8,17 @@ function getComputerChoice() {
     } else if (choiceComputer === 2) {
         console.log("Scissors")
     }
-
-    alert(choiceComputer)
 }
 
-getComputerChoice()
+function getHumanChoice() {
+    let choiceHuman = prompt("Rock? Paper? Or Scissors?")
+
+    if(choiceHuman === "Rock") {
+        console.log("Rock")
+    } else if (choiceHuman === "Paper") {
+        console.log("Paper")
+    } else if (choiceHuman === "Scissors") {
+        console.log("Scissors")
+    }
+}
+
