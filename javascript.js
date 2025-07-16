@@ -26,37 +26,49 @@ function getHumanChoice() {
 let humanScore = 0;
 let computerScore = 0;
 
-function playRound(humanChoice, computerChoice) {
-    
+function playGame() {
 
-    if(humanChoice === "rock" && computerChoice === "rock") {
-        console.log("DRAW!");
-    } else if (humanChoice === "rock" && computerChoice === "paper") {
-        console.log("Computer wins!");
-        ++computerScore
-    } else if (humanChoice === "rock" && computerChoice === "scissors") {
-        console.log("You win!");
-        ++humanScore
-    } else if (humanChoice === "paper" && computerChoice === "rock") {
-        console.log("You win!!");
-        ++humanScore
-    } else if (humanChoice === "paper" && computerChoice === "paper") {
-        console.log("DRAW!");
-    } else if (humanChoice === "paper" && computerChoice === "scissors") {
-        console.log("Computer wins!");
-        ++computerScore
-    } else if (humanChoice === "scissors" && computerChoice === "rock") {
-        console.log("Computer wins!!");
-        ++computerScore
-    } else if (humanChoice === "scissors" && computerChoice === "paper") {
-        console.log("You win!"); 
-        ++humanScore
-    } else if (humanChoice === "scissors" && computerChoice === "scissors") {
-        console.log("DRAW!"); 
-    }
-} 
 
-const humanSelection = getHumanChoice();
-const computerSelection = getComputerChoice();
+    function playRound(humanChoice, computerChoice) {
+        
+        if(humanChoice === "rock" && computerChoice === "rock") {
+            console.log("DRAW! Round will be replayed");
+            playRound(getHumanChoice(), getComputerChoice());
+        } else if (humanChoice === "rock" && computerChoice === "paper") {
+            console.log("Computer wins!");
+            ++computerScore
+        } else if (humanChoice === "rock" && computerChoice === "scissors") {
+            console.log("You win!");
+            ++humanScore
+        } else if (humanChoice === "paper" && computerChoice === "rock") {
+            console.log("You win!!");
+            ++humanScore
+        } else if (humanChoice === "paper" && computerChoice === "paper") {
+            console.log("DRAW! Round will be replayed");
+            playRound(getHumanChoice(), getComputerChoice());
 
-playRound(humanSelection,computerSelection)
+        } else if (humanChoice === "paper" && computerChoice === "scissors") {
+            console.log("Computer wins!");
+            ++computerScore
+        } else if (humanChoice === "scissors" && computerChoice === "rock") {
+            console.log("Computer wins!!");
+            ++computerScore
+        } else if (humanChoice === "scissors" && computerChoice === "paper") {
+            console.log("You win!"); 
+            ++humanScore
+        } else if (humanChoice === "scissors" && computerChoice === "scissors") {
+            console.log("DRAW! Round will be replayed");
+            playRound(getHumanChoice(), getComputerChoice());
+
+        }
+    } 
+
+        playRound(getHumanChoice(), getComputerChoice());
+        playRound(getHumanChoice(), getComputerChoice());
+        playRound(getHumanChoice(), getComputerChoice());
+        playRound(getHumanChoice(), getComputerChoice());
+        playRound(getHumanChoice(), getComputerChoice());
+        
+}
+
+playGame()
