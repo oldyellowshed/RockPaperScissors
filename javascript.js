@@ -2,11 +2,11 @@ function getComputerChoice() {
     let choiceComputer = Math.floor(Math.random() * 3);
     
     if(choiceComputer === 0) {
-        console.log("Rock");
+        return "Rock";
     } else if (choiceComputer === 1) {
-        console.log("Paper");
+        return "Paper";
     } else if (choiceComputer === 2) {
-        console.log("Scissors");
+        return "Scissors";
     }
 }
 
@@ -14,11 +14,11 @@ function getHumanChoice() {
     let choiceHuman = prompt("Rock? Paper? Or Scissors?")
 
     if(choiceHuman === "Rock") {
-        console.log("Rock");
+        return "Rock";
     } else if (choiceHuman === "Paper") {
-        console.log("Paper");
+        return "Paper";
     } else if (choiceHuman === "Scissors") {
-        console.log("Scissors");
+        return "Scissors";
     }
 }
 
