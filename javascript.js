@@ -28,7 +28,6 @@ let computerScore = 0;
 
 function playGame() {
 
-
     function playRound(humanChoice, computerChoice) {
         
         if(humanChoice === "rock" && computerChoice === "rock") {
@@ -65,7 +64,7 @@ function playGame() {
 
         playRound(getHumanChoice(), getComputerChoice());
         playRound(getHumanChoice(), getComputerChoice());
-        playRound(getHumanChoice(), getComputerChoice());
+        playRound(getHumanChoice(), getComputerChoice());  
         playRound(getHumanChoice(), getComputerChoice());
         playRound(getHumanChoice(), getComputerChoice());
         
