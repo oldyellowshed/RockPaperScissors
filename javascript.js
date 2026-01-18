@@ -69,9 +69,9 @@ function playGame() {
         playRound(getHumanChoice(), getComputerChoice());
         
         if(humanScore>computerScore) {
-            console.log("You win! Congradulations! ☺")
+            console.log("You win! Congradulations! ☺");
         } else if (humanScore<computerScore) {
-            console.log("You lost! Computer wins! ☺")
+            console.log("You lost! Computer wins! ☺");
         }
 }
 
